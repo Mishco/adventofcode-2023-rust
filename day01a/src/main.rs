@@ -1,11 +1,12 @@
 use regex::Regex;
 use std::fs;
-fn main() {
-//     // read input
-//     let input = r#"1abc2
-// pqr3stu8vwx
-// a1b2c3d4e5f
-// treb7uchet"#;
+
+pub fn main() {
+    //     // read input
+    //     let input = r#"1abc2
+    // pqr3stu8vwx
+    // a1b2c3d4e5f
+    // treb7uchet"#;
 
     // read input file
     let input = fs::read_to_string("../inputs/day01.txt").unwrap();

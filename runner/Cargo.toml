@@ -1,0 +1,12 @@
+[package]
+name = "runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1.8"
+took = "0.1"
+
+# Days
+day01a = { path = "../day01a" }
+day01b = { path = "../day01b" }
