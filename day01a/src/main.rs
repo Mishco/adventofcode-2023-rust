@@ -11,7 +11,10 @@ pub fn main() {
     // read input file
     let input = fs::read_to_string("../inputs/day01.txt").unwrap();
 
-    // parse input
+    process_input(input);
+}
+
+fn process_input(input: String) -> usize {
     let lines: Vec<_> = input.split('\n').collect();
 
     // process input
@@ -31,6 +34,17 @@ pub fn main() {
         sum += act_val.parse::<usize>().unwrap_or(0);
     }
 
-    // print result
     println!("{}", sum);
+    sum
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_load_part1_input() {
+        let input: String = include_str!("../../inputs/day01.txt").to_string();
+        let res = process_input(input);
+        assert_eq!(res, 55477)
+    }
 }
